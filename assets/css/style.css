@@ -26,6 +26,12 @@ div.col button {
 	cursor: pointer;
 	text-shadow: 0 0 15px #fff; 
 }
+div.main{
+	width: 70%;display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
 div.col div.code-res {
 	width: 100%;
 	min-height:	89px;
@@ -86,7 +92,7 @@ div.generate{
 	width: 100%;
 	height: 100%;
 }
-.button--hyperion {
+.st-btn {
 	font-family: input-mono-narrow, monospace;
 	font-weight: 500;
 	padding: 1rem 1.5rem;
@@ -96,21 +102,21 @@ div.generate{
 	backdrop-filter:  blur(10px);
 }
 
-.button--hyperion span {
+.st-btn span {
 	display: block;
 	position: relative;
 }
 
-.button--hyperion > span {
+.st-btn > span {
 	overflow: hidden;
 }
 
-.button--hyperion > span > span {
+.st-btn > span > span {
 	overflow: hidden;
 	mix-blend-mode: difference;
 }
 
-.button--hyperion:hover > span > span {
+.st-btn:hover > span > span {
 	animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
 }
 
@@ -129,14 +135,14 @@ div.generate{
 	}
 }
 
-.button--hyperion::before {
+.st-btn::before {
 	content: '';
 	background: rgb(21,21,21,.3);
 	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 	transform-origin: 100% 50%;
 }
 
-.button--hyperion:hover::before {
+.st-btn:hover::before {
 	transform: scale3d(0,1,1);
 	transform-origin: 0% 50%;
 }
