@@ -1,15 +1,15 @@
-const app = {
+const app_ = {
     color: 'linear-gradient(35deg, rgb(255,0,0), rgb(0,255,0))'
 };
 
 function replaceItem() {
-    app.color = app.color.replace('linear-gradient', '<span class="st-lg">$&</span>');
-    app.color = app.color.replace(/[(]/gi, '<span class="st-br" data-open-br="true">$&</span>');
-    app.color = app.color.replace(/[)]/gi, '<span class="st-br" data-close-br="true">$&</span>');
-    app.color = app.color.replace(/rgb/gi, '<span class="st-rgb" id="color">$&</span>');
-    app.color = app.color.replace(/[0-9]/gi, '<span class="st-num">$&</span>');
-    app.color = app.color.replace(/deg/gi, '<span class="st-deg">$&</span>');
-    app.color = app.color.replace(/[,]/gi, '<span class="st-char">$&</span>');
+    app_.color = app_.color.replace('linear-gradient', '<span class="st-lg">$&</span>');
+    app_.color = app_.color.replace(/[(]/gi, '<span class="st-br" data-open-br="true">$&</span>');
+    app_.color = app_.color.replace(/[)]/gi, '<span class="st-br" data-close-br="true">$&</span>');
+    app_.color = app_.color.replace(/rgb/gi, '<span class="st-rgb" id="color">$&</span>');
+    app_.color = app_.color.replace(/[0-9]/gi, '<span class="st-num">$&</span>');
+    app_.color = app_.color.replace(/deg/gi, '<span class="st-deg">$&</span>');
+    app_.color = app_.color.replace(/[,]/gi, '<span class="st-char">$&</span>');
 }
 replaceItem();
 
@@ -22,9 +22,9 @@ function color() {
 
 function setColor() {
     document.body.style.background = color();
-    app.color = a;
+    app_.color = a;
     replaceItem();
-    $color.innerHTML = app.color;
+    $color.innerHTML = app_.color;
 };
 $generate.on('click', function() {
     setColor()
