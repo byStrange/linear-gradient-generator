@@ -13,7 +13,7 @@ function replaceItem() {
 }
 replaceItem();
 
-let a;
+var a;
 
 function color() {
     a = `linear-gradient(35deg, rgb(${round(random(255))},${round(random(255))}, ${round(random(255))}), rgb(${round(random(255))},${round(random(255))}, ${round(random(255))}))`;
